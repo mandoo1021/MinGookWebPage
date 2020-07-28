@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+1. 역할 설정
+2. 제약사항 설정'
+3. 인증 설정
+	인증 됐다면 addProduct.jsp
+	인증 실패 login_failed.jsp
+<display-name>제목이 들어가는 부분</display-name>
+ -->
+<web-app>
+	<servlet>
+		<servlet-name>ContactController</servlet-name>
+		<servlet-class>mvc.controller.ContactController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ContactController</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/exception/exceptionNoPage.jsp</location>
+	</error-page>
+	
+</web-app>
